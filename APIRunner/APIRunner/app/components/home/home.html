@@ -1,0 +1,26 @@
+﻿<div>
+
+    <h2>Runner Top</h2>
+    <p>{{vm.runnerTop}}</p>
+
+    <h2>Estos son todos los runners</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Dorsal</td>
+                <td>Time</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="r in vm.runners | orderBy:'Time'">
+                <td>{{ r.ID     }}</td>
+                <td>{{ r.Name   }}</td>
+                <td>{{ r.Dorsal }}</td>
+                <td>{{ r.Time   }} minutes</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
